@@ -16,7 +16,15 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     "If you can dream it, you can do it",
     "It always seems impossible until it’s done",
     "The best way to predict the future is to create it",
-    "People will forget what you said. People will forget what you did. But people will never forget how you made them feel"
+    "People will forget what you said. People will forget what you did. But people will never forget how you made them feel",
+    "The tougher the fight, the more important the mental attitude",
+    "Never let the fear of striking out stop you from playing the game",
+    "The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice",
+    "I don’t love studying. I hate studying. I like learning. Learning is beautiful",
+    "Education is the passport to the future, for tomorrow belongs to those who prepare for it today",
+    "What makes a child gifted and talented may not always be good grades in school, but a different way of looking at the world and learning.",
+    "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
+    "You don’t learn to walk by following rules. You learn by doing and falling over."
     ]
     leitura(lista_quotes[randint(0, lista_quotes.length)])
 })
@@ -61,6 +69,14 @@ if (nota != -1) {
         }
     }
     basic.clearScreen()
+    basic.pause(1000)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # # # .
+        # . # . #
+        . . # . .
+        `)
 }
 let nota = 0
 let abcedario: string[] = []
