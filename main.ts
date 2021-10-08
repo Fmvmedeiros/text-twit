@@ -1,7 +1,13 @@
 enum RadioMessage {
     message1 = 49434
 }
-function leutura (texto: string) {
+input.onButtonPressed(Button.A, function () {
+    leitura("teste 1 2 3 d")
+})
+input.onButtonPressed(Button.B, function () {
+    leitura("hello world abcdefghijklm")
+})
+function leitura (texto: string) {
     lista_de_texto = texto
     for (let índice = 0; índice <= lista_de_texto.length - 1; índice++) {
         letra = lista_de_texto[índice]
@@ -43,16 +49,10 @@ if (nota != -1) {
     }
     basic.clearScreen()
 }
-input.onButtonPressed(Button.A, function () {
-    leutura("teste 1 2 3 d")
-})
-input.onButtonPressed(Button.B, function () {
-    leutura("hello world abcdefghijklm")
-})
 let nota = 0
 let abcedario: string[] = []
-let lista_de_texto = ""
 let letra = ""
+let lista_de_texto = ""
 music.changeTempoBy(200)
 basic.forever(function () {
 	
