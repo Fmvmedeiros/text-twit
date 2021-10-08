@@ -4,8 +4,21 @@ enum RadioMessage {
 input.onButtonPressed(Button.A, function () {
     leitura("teste 1 2 3 d")
 })
-input.onButtonPressed(Button.B, function () {
-    leitura("hello world abcdefghijklm")
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    lista_quotes = [
+    "Anyone who has never made a mistake has never tried anything new",
+    "Your attitude, not your aptitude, will determine your altitude",
+    "I have not failed. I've just found 10,000 ways that won't work",
+    "Why fit in when you were born to stand out?",
+    "The secret of getting ahead is getting started",
+    "The people who are crazy enough to believe they can change the world are the ones who do",
+    "Yesterday is history. Tomorrow is a mystery. Today is a gift. That’s why we call it ‘The Present",
+    "If you can dream it, you can do it",
+    "It always seems impossible until it’s done",
+    "The best way to predict the future is to create it",
+    "People will forget what you said. People will forget what you did. But people will never forget how you made them feel"
+    ]
+    leitura(lista_quotes[randint(0, lista_quotes.length)])
 })
 function leitura (texto: string) {
     lista_de_texto = texto
@@ -40,7 +53,7 @@ function leitura (texto: string) {
         "z"
         ]
         nota = abcedario.indexOf(letra)
-        basic.showString("" + (letra),5)
+        basic.showString("" + (letra),6)
 if (nota != -1) {
             music.playTone(200 + 40 * nota, music.beat(BeatFraction.Whole))
         } else {
@@ -51,8 +64,9 @@ if (nota != -1) {
 }
 let nota = 0
 let abcedario: string[] = []
-let letra = ""
 let lista_de_texto = ""
+let lista_quotes: string[] = []
+let letra = ""
 music.changeTempoBy(200)
 basic.forever(function () {
 	
